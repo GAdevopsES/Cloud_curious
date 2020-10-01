@@ -1,0 +1,27 @@
+# This workflow will triage pull requests and apply a label based on the
+# paths that are modified in the pull request.
+#
+# To use this workflow, you will need to set up a .github/labeler.yml
+# file with configuration.  For more information, see:
+# https://github.com/actions/labeler
+
+name: Labeler
+on: [pull_request]
+
+jobs:
+  label:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Pull request automerge action
+      # You may pin to the exact commit or the version.
+      # uses: DavideViolante/pr-automerge-action@1b205605eeb9850f62456ed137f81213aa64338b
+      uses: DavideViolante/pr-automerge-action@v1.1.0
+      with:
+        # Pull request merge method. One between merge, squash, rebase
+        merge-method: squash
+        # Minimum numbers of approvals to merge the pull request
+        min-approvals: 0
+        # Base ref branch to filter pull requests
+        base-ref: master
