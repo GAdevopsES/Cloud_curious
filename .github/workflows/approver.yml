@@ -15,6 +15,6 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
           EVENT_TYPE: APPROVE
-          BRANCHES: +
-          AUTHOR: +
+          BRANCHES: .+
+          AUTHOR: .+
           MESSAGE: Nice approve from github bot.
