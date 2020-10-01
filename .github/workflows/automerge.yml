@@ -10,7 +10,7 @@ name: Merger
 on:
   schedule:
     # Every minute
-    - cron: "* * * * *"
+    - cron: "*/5 * * * *"
 jobs:
   pr-automerge:
     runs-on: ubuntu-latest
