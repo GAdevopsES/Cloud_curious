@@ -22,6 +22,6 @@ jobs:
         # Pull request merge method. One between merge, squash, rebase
         merge-method: 'squash'
         # Minimum numbers of approvals to merge the pull request
-        min-approvals: 1
+        min-approvals: 0
         # Base ref branch to filter pull requests
         base-ref: 'master'
