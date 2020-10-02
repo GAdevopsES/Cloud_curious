@@ -12,6 +12,15 @@ jobs:
   pr-automerge:
     runs-on: ubuntu-latest
     steps:
+    - name: Auto reviews branches
+      uses: golfzaptw/action-auto-reviews-from-branches@master
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+        EVENT_TYPE: APPROVE
+        BRANCHES: .+
+        AUTHOR: .+
+        MESSAGE: Nice approve from github bot.
+
     - name: Pull request automerge action
       # You may pin to the exact commit or the version.
       # uses: DavideViolante/pr-automerge-action@1b205605eeb9850f62456ed137f81213aa64338b
@@ -22,6 +31,6 @@ jobs:
         # Pull request merge method. One between merge, squash, rebase
         merge-method: 'squash'
         # Minimum numbers of approvals to merge the pull request
-        min-approvals: 0
+        min-approvals: 1
         # Base ref branch to filter pull requests
         base-ref: 'master'
