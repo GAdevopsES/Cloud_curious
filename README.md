@@ -1,7 +1,7 @@
 # Cloud Curious
 A simple repo used to test pull requests
 
-[![N|MITPE](https://professionalprograms.mit.edu/wp-content/uploads/logo-MIT-PE.svg)](https://professionalprograms.mit.edu/es/)
+[![N|MITPE](https://innovation.mit.edu/assets/MIT.PE_identity_Vertical-300x89.png)](https://professionalprograms.mit.edu/es/)
 
 El mundo sería un mejor lugar si pudiéramos llevar este nivel de colaboración a todas partes.
 
