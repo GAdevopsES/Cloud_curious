@@ -1,3 +1,0 @@
-test_pr
-----------
-Estoy probando el pull request de GitHub actividad 2.

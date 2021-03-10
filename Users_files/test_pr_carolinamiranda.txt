@@ -1,4 +1,0 @@
-Hola compañeros esto es una prueba de edición de archivo usando git & github.
-
-Saludos,
-Carolina Miranda

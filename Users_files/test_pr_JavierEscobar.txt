@@ -1,6 +1,0 @@
-Prueba de contribución al repositorio
-
-MIT Cloud & DevOps
-Módulo 2
-
-¡Saludos a todos!
