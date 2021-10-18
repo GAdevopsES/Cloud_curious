@@ -1,0 +1,4 @@
+Creating a Pull Request from GitHub
+    // Modify this section
+    string public name = "MIT class: Pull Request";
+    string public symbol = "test_pr_EdisonVirto";
