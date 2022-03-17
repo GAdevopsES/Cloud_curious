@@ -1,0 +1,3 @@
+creating a file inside forked repository
+MIT training module 2 exercise
+acitivity 2
