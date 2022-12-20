@@ -1,0 +1,4 @@
+!# /bin/bash
+
+-This is the first shell script test
+-echo print 
