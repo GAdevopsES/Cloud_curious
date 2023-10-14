@@ -1,2 +1,4 @@
 automerge:
 - '**/**'
+- any: ['**/**']
+  all: ['!.github/**', '!README.md', '!LICENSE']
