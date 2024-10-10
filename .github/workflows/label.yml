@@ -1,14 +1,14 @@
 name: Pull Request Labeler
 on:
-  pull_request:
-    types: [opened, synchronize, reopened] # Define the events you want to trigger the workflow
+  pull_request_target:
+    types: [opened, synchronize, reopened]
 
 jobs:
   label:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      pull-requests: write # Ensure this is set for PR merging
+      pull-requests: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -16,13 +16,10 @@ jobs:
       - name: Apply labels
         uses: actions/labeler@v5
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-          configuration-path: .github/labeler.yml
-          
-      # Optional: Automate merging if desired
+          repo-token: "${{ secrets.MY_GITHUB_TOKEN }}" # Use your PAT
+
       - name: Automerge
         uses: pascalgn/automerge-action@v0.15.6
         with:
-          merge-method: merge # Use your preferred merge method (merge, squash, rebase)
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
-
+          merge-method: merge
+          repo-token: "${{ secrets.MY_GITHUB_TOKEN }}" # Use your PAT
