@@ -26,15 +26,15 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
         with:
-          ref: main  # Specify the main branch
-          fetch-depth: 0  # Fetch all history
+          ref: main
+          fetch-depth: 0
 
       - name: Automerge
-        uses: pascalgn/automerge-action@v0.15.6
+        uses: pascalgn/automerge-action@latest  # Use the latest version if available
         env:
-          GITHUB_TOKEN: "${{ secrets.MY_GITHUB_TOKEN }}"  # Use your PAT here
+          GITHUB_TOKEN: "${{ secrets.MY_GITHUB_TOKEN }}"
           MERGE_LABELS: "automerge"
           MERGE_REMOVE_LABELS: "automerge"
           MERGE_METHOD: "squash"
