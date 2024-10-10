@@ -1,7 +1,6 @@
 name: Pull Request Labeler
 on:
-  pull_request_target:
-    types: [opened, synchronize, reopened]
+- pull_request_target
 
 jobs:
   label:
@@ -10,16 +9,7 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Apply labels
-        uses: actions/labeler@v5
-        with:
-          repo-token: "${{ secrets.MY_GITHUB_TOKEN }}" # Use your PAT
-
-      - name: Automerge
-        uses: pascalgn/automerge-action@v0.15.6
-        with:
-          merge-method: merge
-          repo-token: "${{ secrets.MY_GITHUB_TOKEN }}" # Use your PAT
+    - uses: actions/labeler@v5
+      with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+        configuration-path: .github/labeler.yml
